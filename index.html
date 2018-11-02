@@ -199,14 +199,13 @@ var config = {"autoCapture":{"scroll":true},"userConsentCookieName":"MSCC","core
 <li>2018.4.9: We are organizing the 6th International Workshop on Utility-driven Mining (<a href="http://www.philippe-fournier-viger.com/utility_mining_workshop_2018/">UDM 2018</a>) in conjunction with KDD 2018.</li>
 <li>2018.4.9: A tutorial on <a href="index-44.htm" >Utility-driven Pattern Mining</a>. Download slide decks for free!</li>
 </ul>
-<h1>Representative Research</h1>
+
 
 <h1>The Intelligent Environment</h1>
 <h2>Tackling Air Pollution Using Big Data</h2>
 <p>Refer to Urban Air&#8217;s <a class="invalidLink" href="index-46.htm" >homepage</a> for more details.</p>
 <h3>A. Real-Time Air Quality Inference</h3>
 <p><span id="637cdc8a-d832-4857-96f4-c7625ed5bb0a" class="ImageBlock fn"><img id="Image637cdc8a-d832-4857-96f4-c7625ed5bb0a" src="./image/urbancomputing-uair.jpg"  alt="" /><span id="ImageCaption637cdc8a-d832-4857-96f4-c7625ed5bb0a" class="ImageCaptionCoreCss ImageCaption"></span></span></p>
-<p><b></b>Public Website: <a href="http://urbanair.msra.cn/">http://urbanair.msra.cn/</a> Install Windows phone App <a href="http://www.windowsphone.com/s?appid=f36d5a33-2ccc-45f5-afd2-0c1afc5fc6dc">here</a>.</p>
 <p><b>Goal</b>: We infer the real-time and fine-grained air quality information throughout a city, based on the (historical and real-time) air quality data reported by existing monitor stations and a variety of data sources we observed in the city, such as meteorology, traffic flow, human mobility, structure of road networks, and point of interests (POIs).</p>
 <p><b>Methodology</b>: We propose a semi-supervised learning approach based on a co-training framework that consists of two separated classifiers. One is a spatial classifier based on an artificial neural network (ANN), which takes spatially-related features (e.g., the density of POIs and length of highways) as input to model the spatial correlation between air qualities of different locations. The other is a temporal classifier based on a linear-chain conditional random field (CRF), involving temporally-related features (e.g., traffic and meteorology) to model the temporal dependency of air quality in a location.</p>
 <p><b>Publication:</b></p>
@@ -218,26 +217,7 @@ var config = {"autoCapture":{"scroll":true},"userConsentCookieName":"MSCC","core
 <p><b>Methodology:</b> Our predictive model is comprised of four major components: 1) a linear regression-based temporal predictor to model the local factor of air quality, 2) a neural network-based spatial predictor modeling the global factors, 3) a dynamic aggregator combining the predictions of the spatial and temporal predictors according to the meteorological data, and 4) an inflection predictor to capture the sudden changes of air quality.</p>
 <p><b>Publication:</b></p>
 <p>[1]<b> Yu Zheng</b>, Xiuwen Yi, Ming Li, Ruiyuan Li, Zhangqing Shan, Eric Chang, Tianrui Li. <a href="index-49.htm" >Forecasting Fine-Grained Air Quality Based on Big Data</a>. In the Proceeding of the 21th SIGKDD conference on Knowledge Discovery and Data Mining (<b>KDD 2015</b>). (<a href="./data/Data-1.zip" >Data</a>)(<a href="./slides/forecasting20air20quality-kdd2015-presentation-yuzheng.pptx" >PPT</a>)</p>
-<h3>C. Suggesting Locations for New Station Deployment</h3>
-<p>Given a limited budget to build a few additional air quality monitoring stations, where shall we put them? The research solves this problem from the perspective of maximizing the inference accuracy and stability.</p>
-<p><span id="1193facf-dfda-4652-8dee-7f8d09f6df91" class="ImageBlock fn"><span id="ImageCaption1193facf-dfda-4652-8dee-7f8d09f6df91" class="ImageCaptionCoreCss ImageCaption"><img class="alignnone wp-image-213316" src="./image/urbanair_station-selection.png"  alt="urbanair_station-selection" width="596" height="203" srcset="https://www.microsoft.com/en-us/research/wp-content/uploads/2014/03/urbanair_station-selection.png 740w, https://www.microsoft.com/en-us/research/wp-content/uploads/2014/03/urbanair_station-selection-300x102.png 300w" sizes="(max-width: 596px) 100vw, 596px" /></span></span></p>
-<p><strong>Publication:</strong></p>
-<p>[1] Hsun-Ping Hsieh*, Shou-De Lin, <b>Yu Zheng</b>. <a class="invalidLink" href="index-50.htm" >Inferring Air Quality for Station Location Recommendation Based on Big Data</a>. In the Proceeding of the 21th SIGKDD conference on Knowledge Discovery and Data Mining (<b>KDD 2015</b>).</p>
-<h3><strong>D. Identifying the Root Cause of Air Pollution</strong></h3>
-<p>The research identifies the spatio-temporal causality between air pollutants of different cities, suggesting the root cause of air pollution based on AI  and big data technology.</p>
-<p><img class="alignnone size-full wp-image-417785" src="./image/flyer-air-pollution-causality.png"  alt="" width="878" height="209" srcset="https://www.microsoft.com/en-us/research/wp-content/uploads/2014/03/flyer-air-pollution-causality.png 878w, https://www.microsoft.com/en-us/research/wp-content/uploads/2014/03/flyer-air-pollution-causality-300x71.png 300w, https://www.microsoft.com/en-us/research/wp-content/uploads/2014/03/flyer-air-pollution-causality-768x183.png 768w" sizes="(max-width: 878px) 100vw, 878px" /></p>
-<p><strong>Publication:</strong></p>
-<p>[1] Julie Yixuan Zhu, Chao Zhang, Huichu Zhang, Shi Zhi, Victor O.K. Li, Jiawei Han, and <strong>Yu Zheng</strong>, <a href="index-51.htm" >pg-Causality: Identifying Spatiotemporal Causal Pathways for Air Pollutants with Urban Big Data.</a> IEEE Transactions on Big Data. DOI: 10.1109/TBDATA.2017.2723899</p>
-<p><b>Media Coverage:</b></p>
-<p>[1] <a href="http://www.technologyreview.com/lists/innovators-under-35/2013/visionary/yu-zheng/">Analyzing newly available data about the intricacies of urban life could make cities better</a>.” <b>MIT Technology Review</b>. 2013.8.21</p>
-<p>[2] Interviewed by IFeng.com. <a href="http://tech.ifeng.com/talk/specialtalk/special/citycomputing/">Big data can predict air quality</a>. 2013.11.29 (In Chineses)</p>
-<p>[3] ComputerWorld: <a href="http://www.computerworld.com/article/2934596/green-it/microsoft-predicts-chinas-air-pollution-with-data-analysis.html">Microsoft predicts China&#8217;s air pollution with data analysis</a>, 2015.6.11</p>
-<p>[4] Ming Pao (HK): <a href="http://news.mingpao.com/pns/微軟大數據分析%20實時監測港空氣/web_tc/article/20150609/s00002/1433786930171">Microsoft predicts air quality with big data</a>, 2015.6.10</p>
-<p>[5] GeekWire Reporter: <a href="http://www.geekwire.com/2015/pollution-beijing-reaches-extreme-levels-heres-microsoft-research-help/">What Microsoft Research is doing to help Beijing air pollution</a>. 2015.11.30</p>
-<p>[6] NBC News: <a href="http://www.nbcnews.com/tech/innovation/microsoft-ibm-eye-big-business-opportunity-china-s-air-pollution-n487001">Microsoft, IBM Eye Big Business Opportunity in China&#8217;s Air Pollution</a>. 2015.12.28</p>
-<p>[7] Reuters: <a href="http://www.reuters.com/article/us-china-pollution-idUSKBN0UB1KB20151229">Tech giants spot opportunity in forecasting China&#8217;s smog</a>, 2015.12.28</p>
-<p>[8] China Daily: <a href="http://usa.chinadaily.com.cn/china/2016-01/19/content_23145602.htm">Microsoft, IBM eye Technology to forecast air pollution in China</a>. 2016.1.19</p>
-<p>________________________________________________________</p>
+
 
 <h1>Urban Energy Based on Big Data</h1>
 <h3>A. Gas Consumption and Vehicle Emissions on Roads</h3>
