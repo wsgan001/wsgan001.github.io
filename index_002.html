@@ -2,49 +2,52 @@
 <p align="justify"><em>Utility computing</em> is 
 
 版权声明：本文为博主原创文章，未经博主允许不得转载。	https://blog.csdn.net/qq_35414569/article/details/79969585
-前言
-本篇博客出于学习交流目的，主要是用来记录自己学习后的理解，过程中遇到的问题和心路历程，方便之后回顾。过程中可能引用其他大牛的博客，文末会给出相应链接，侵删！
+前言: 本篇博客出于学习交流目的，主要是用来记录自己学习后的理解，过程中遇到的问题和心路历程，方便之后回顾。过程中可能引用其他大牛的博客，文末会给出相应链接，侵删！
 
+  <p align="justify">
 REMARK：本人菜鸟一枚，如有理解错误还望大家能够指出，相互交流。也是第一次以博客的形式记录，文笔烂到自己都看不下去，哈哈哈
+</p>
 
+  <p align="justify">
 这篇学习笔记关于一种高效Top-k的频繁效用项集挖掘算法。 
 参考文献：Efficient Algorithms for Mining Top-K High Utility Itemsets
-
+  </p>
+  
+<p align="justify">
 本博客介绍一些高效用频繁模式挖掘以及传统高效用top-k挖掘的基本概念，具体算法在Top-k高效用项集挖掘学习笔记(二) TKU，Top-k高效用项集挖掘学习笔记(三) TKO 中详细记录，请手动跳转
-
+</p>
   
-  
+<p align="justify">  
 Top-k挖掘算法研究意义：解决传统高效用模式频繁项集挖掘需要人为设置阈值的问题，太大或太小的阈值都不好，而重复计算不同阈值结果又造成多次无用重复执行。
+</p>
 
+
+<p align="justify">
 一些可能会涉及到的定义： 
 高效用项集 (HUI)：high utility itemset ，如果一个项集不小于用户自定义的最小效用阈值； 
 有价值的交易效用 (TWU)：transaction-weighted utilization，一种高效用频繁挖掘模型，也作项集的效用值上界值； 
 高价值的交易效用项集 (HTWUI)：high transaction-weighted utilization itemset ，TWU中效用值大于阈值的项集，由于TWU是效用值上界，所以HTWUI一定包含HUI；
+</p>
 
 传统基于TWU的模型，包含两个步骤，phase I ：获得所有HTWUI集合（由于TWU是效用值上界，所以HTWUI一定包含HUI）；phase II：再基于HTWUI集合具体计算获得HUI；
 
+<p align="justify">
 Top-k高效用项集挖掘即在考虑效用值场景下进行Top-k挖掘。
+</p>
 
-Top-k挖掘算法研究意义：解决传统高效用模式频繁项集挖掘需要人为设置阈值的问题，太大或太小的阈值都不好，而重复计算不同阈值结果又造成多次无用重复执行。
-
-一些可能会涉及到的定义： 
-高效用项集 (HUI)：high utility itemset ，如果一个项集不小于用户自定义的最小效用阈值； 
-有价值的交易效用 (TWU)：transaction-weighted utilization，一种高效用频繁挖掘模型，也作项集的效用值上界值； 
-高价值的交易效用项集 (HTWUI)：high transaction-weighted utilization itemset ，TWU中效用值大于阈值的项集，由于TWU是效用值上界，所以HTWUI一定包含HUI；
-
-传统基于TWU的模型，包含两个步骤，phase I ：获得所有HTWUI集合（由于TWU是效用值上界，所以HTWUI一定包含HUI）；phase II：再基于HTWUI集合具体计算获得HUI；
-
-Top-k高效用项集挖掘即在考虑效用值场景下进行Top-k挖掘。
-
+<p align="justify">
  Top-k高效用项集挖掘面临的主要挑战： 
 1）高效用项集不具有单调性或反单调性，所以剪枝是很有难度的； 
 2）怎么结合现有TWU算法和top-k概念。因为在phase I 时候如果确保所有HTWUI一定包含HUI，起始设置最小阈值为0，但这可能会带来一个很大的搜索空间； 
 3）没有给定的阈值，随着算法的进行不断更新边界阈值， (border minimum utility threshold), 最初为0，如果不能高效的更新将面临巨大的计算时间和存储开销； 
 4）如何在不丢失Top-k HUIs 的情况下高效的增大阈值
+  </p>
+  
+<p align="justify">
 论文中提出了两种算法： 
 (1)TKU (mining Top-K Utility itemsets) ；在Top-k高效用项集挖掘_学习笔记(二) TKU会介绍，其中还包括五种优化策略：PE、NU、MD、MC、SE 
 (2)TKO (mining Top-K utility itemsets in One phase) ；Top-k高效用项集挖掘_学习笔记(三) TKO 中介绍，还包括三个剪枝策略：RUC、RUZ、EPB；请手动跳转。
-
+</p>
  
 --------------------- 
 作者：Erpim 
